@@ -25,26 +25,26 @@ const cardTitle = [
 export default function SetupTypeCards() {
   return (
     <section
-      id="business-setup"
-      className="py-20 lg:py-32 relative overflow-hidden"
+      id="services"
+      className="py-12 sm:py-16 lg:py-28 relative overflow-hidden"
       aria-labelledby="setup-heading"
       style={{ background: "#FFFFFF" }}
     >
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* ── Section Header ── */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <div className="section-label justify-center mb-5">
             Choose Your Business Setup
           </div>
-          <h2 id="setup-heading" className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#2c3650] mb-5 tracking-tight">
+          <h2 id="setup-heading" className="font-serif text-2xl sm:text-4xl lg:text-5xl font-bold text-[#2c3650] mb-4 tracking-tight">
             Find the Right Setup
             <br />
             <span className="text-[#266464]">
               for Your Goals
             </span>
           </h2>
-          <p className="text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-slate-500 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto leading-relaxed">
             Every business has different requirements. Choose the jurisdiction that perfectly aligns with your comprehensive setup goals.
           </p>
         </div>

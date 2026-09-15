@@ -48,7 +48,7 @@ export default function Header() {
                 { name: "About Us", href: "/#about-us" },
                 { name: "Services", href: "/#services" },
                 { name: "Business Setup", href: "/#business-setup" },
-                { name: "Testimonials", href: "/#testimonials-heading" },
+                { name: "Testimonials", href: "/#testimonials" },
                 { name: "Contact", href: "/#lead-form" }
               ].map((link) => (
                 <Link
@@ -97,10 +97,10 @@ export default function Header() {
           <nav className="flex flex-col gap-2">
             {[
               { name: "Home", href: "/" },
-              { name: "About Us", href: "/#why-horizon-line" },
+              { name: "About Us", href: "/#about-us" },
               { name: "Services", href: "/#services" },
               { name: "Business Setup", href: "/#business-setup" },
-              { name: "Testimonials", href: "/#testimonials-heading" },
+              { name: "Testimonials", href: "/#testimonials" },
               { name: "Contact", href: "/#lead-form" }
             ].map((link) => (
               <Link

@@ -5,16 +5,16 @@ import { Play, Phone, MessageSquare } from "lucide-react";
 
 export default function AboutUs() {
   return (
-    <section id="about-us" className="py-20 lg:py-28" style={{ backgroundColor: "#f8f9fa" }}>
+    <section id="about-us" className="py-12 lg:py-24" style={{ backgroundColor: "#f8f9fa" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
           {/* Left Content */}
           <div>
-            <h2 className="text-3xl sm:text-4xl lg:text-3xl font-semibold text-[#1B365D] mb-6 leading-snug tracking-tight">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-[#1B365D] mb-4 leading-snug tracking-tight">
               Horizon Line Your Trusted Partner for Business Setup in the UAE
             </h2>
-            <div className="text-slate-600 space-y-5 text-sm leading-relaxed mb-8">
+            <div className="text-slate-600 space-y-3 text-sm leading-relaxed mb-6">
               <p>
                 Horizon Line is a trusted business setup partner helping entrepreneurs, investors, startups, and established businesses establish and grow their presence across the UAE’s seven Emirates. With expertise in Mainland, Free Zone, and Offshore company formation, we provide practical, personalised guidance to help you choose the right business structure, jurisdiction, licence, and setup strategy for your goals.
               </p>
@@ -48,9 +48,9 @@ export default function AboutUs() {
             </div>
           </div>
 
-          {/* Right Image */}
+          {/* Right Image - hidden on mobile */}
           <div 
-            className="relative rounded-3xl overflow-hidden shadow-2xl w-full bg-slate-100 cursor-pointer group" 
+            className="relative rounded-2xl overflow-hidden shadow-xl w-full bg-slate-100 cursor-pointer group hidden lg:block" 
             style={{ aspectRatio: "1" }}
             onClick={() => window.dispatchEvent(new Event("open-popup-form"))}
           >

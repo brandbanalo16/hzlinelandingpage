@@ -67,7 +67,8 @@ const TestimonialCard = ({ testimonial }: { testimonial: any }) => (
 export default function Testimonials() {
   return (
     <section
-      className="py-24 lg:py-32 relative overflow-hidden bg-slate-50"
+      id="testimonials"
+      className="py-12 sm:py-16 lg:py-28 relative overflow-hidden bg-slate-50"
       aria-labelledby="testimonials-heading"
     >
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center">

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const footerSections = [
   {
@@ -21,11 +22,11 @@ const footerSections = [
     title: "Company",
     links: [
       { label: "Home", href: "/" },
-      { label: "About Us", href: "/#why-horizon-line" },
+      { label: "About Us", href: "/#about-us" },
       { label: "Services", href: "/#services" },
       { label: "Business Setup", href: "/#business-setup" },
-      { label: "Testimonials", href: "/#testimonials-heading" },
-      { label: "Contact", href: "/#pop-up-form" }
+      { label: "Testimonials", href: "/#testimonials" },
+      { label: "Contact", href: "/#lead-form" }
     ],
   },
 ];
@@ -35,6 +36,7 @@ const initialForm = { name: "", phone: "", email: "", service: "" };
 export default function Footer() {
   const [form, setForm] = useState(initialForm);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const router = useRouter();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -43,12 +45,23 @@ export default function Footer() {
     e.preventDefault();
     setStatus("loading");
     try {
-      const res = await fetch("/api/lead", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, source: "footer" }),
+        body: JSON.stringify({ 
+          fullName: form.name,
+          phone: form.phone,
+          email: form.email,
+          businessSetupIn: form.service,
+          source: "footer" 
+        }),
       });
-      if (res.ok) { setStatus("success"); setForm(initialForm); }
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data.success) { 
+        setStatus("success"); 
+        setForm(initialForm); 
+        router.push("/thank-you");
+      }
       else setStatus("error");
     } catch {
       setStatus("error");
@@ -60,14 +73,14 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#060E1C] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
 
         {/* 4-Column Footer Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_2fr] gap-6 lg:gap-8">
 
           {/* COL 1 — Brand */}
           <div>
-            <img src="/src/img/logo-black.webp" alt="Horizon Line" className="w-60 h-auto mb-4" />
+            <img src="/src/img/logo-black.webp" alt="Horizon Line" className="w-60 h-auto mb-4" style={{ filter: "brightness(0) invert(1)" }} />
             <p className="text-slate-400 text-sm leading-relaxed mb-6">
               Professional business setup and company formation guidance across all 7 Emirates — Mainland, Free Zone and Offshore.
             </p>

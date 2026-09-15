@@ -51,7 +51,7 @@ export default function WhyHorizonLine() {
   return (
     <section
       id="why-horizon-line"
-      className="py-20 lg:py-32 relative overflow-hidden"
+      className="py-12 sm:py-16 lg:py-28 relative overflow-hidden"
       aria-labelledby="why-heading"
       style={{ background: "#FFFFFF" }}
     >
@@ -72,13 +72,13 @@ export default function WhyHorizonLine() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <div className="section-label justify-center mb-5">
             Why Horizon Line
           </div>
           <h2
             id="why-heading"
-            className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0A1628] mb-5 tracking-tight"
+            className="font-serif text-2xl sm:text-4xl lg:text-5xl font-bold text-[#0A1628] mb-4 tracking-tight"
           >
             Why Choose
             <span className="text-[#266464]">
@@ -92,7 +92,7 @@ export default function WhyHorizonLine() {
         </div>
 
         {/* Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5">
           {benefits.map((benefit) => {
             const Icon = benefit.icon;
             const isTeal = benefit.color === "#266464";

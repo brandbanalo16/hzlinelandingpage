@@ -67,6 +67,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.horizonlineuae.com",
   },
+  icons: {
+    icon: "/src/img/favicon.png",
+    shortcut: "/src/img/favicon.png",
+    apple: "/src/img/favicon.png",
+  },
 };
 
 const organizationSchema = {

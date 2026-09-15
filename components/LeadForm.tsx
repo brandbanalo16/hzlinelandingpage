@@ -2,6 +2,7 @@
 
 import { useState, useId } from "react";
 import { Send, MessageCircle, AlertCircle, CheckCircle, ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 type FormData = {
   fullName: string;
@@ -28,6 +29,7 @@ export default function LeadForm() {
   const [errors, setErrors] = useState<Partial<FormData>>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const id = useId();
+  const router = useRouter();
 
   const validate = (): boolean => {
     const e: Partial<FormData> = {};
@@ -65,8 +67,14 @@ export default function LeadForm() {
           source: "lead-form",
         }),
       });
-      if (res.ok) { setStatus("success"); setForm(initialForm); }
-      else setStatus("error");
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data.success) {
+        setStatus("success");
+        setForm(initialForm);
+        router.push("/thank-you");
+      } else {
+        setStatus("error");
+      }
     } catch {
       setStatus("error");
     }

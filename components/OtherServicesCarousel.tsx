@@ -68,7 +68,7 @@ export default function OtherServicesCarousel() {
   };
 
   return (
-    <section id="services" className="py-20 lg:py-28 bg-white" aria-labelledby="services-carousel-heading">
+    <section id="other-services" className="py-12 sm:py-16 lg:py-24 bg-white" aria-labelledby="services-carousel-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-10">
@@ -76,7 +76,7 @@ export default function OtherServicesCarousel() {
             <p className="text-[#266464] text-sm font-bold tracking-widest uppercase mb-3">
               More Business Support
             </p>
-            <h2 id="services-carousel-heading" className="text-3xl sm:text-4xl font-bold text-[#0A1628] tracking-tight">
+            <h2 id="services-carousel-heading" className="text-xl sm:text-3xl lg:text-4xl font-bold text-[#0A1628] tracking-tight">
               More Services to Support Your UAE Business
             </h2>
             <p className="text-slate-600 mt-4 max-w-xl leading-relaxed">

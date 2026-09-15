@@ -3,6 +3,7 @@
 import { useState, useEffect, useId, useCallback } from "react";
 import Image from "next/image";
 import { X, Phone, CheckCircle, AlertCircle, ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 type FormData = {
   fullName: string;
@@ -30,6 +31,7 @@ export default function PopupForm() {
   const [errors, setErrors] = useState<Partial<FormData>>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const id = useId();
+  const router = useRouter();
 
   const handleOpen = useCallback(() => {
     setOpen(true);
@@ -91,7 +93,14 @@ export default function PopupForm() {
           source: "popup-form",
         }),
       });
-      setStatus(res.ok ? "success" : "error");
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data.success) {
+        setStatus("success");
+        setForm(initialForm);
+        router.push("/thank-you");
+      } else {
+        setStatus("error");
+      }
     } catch {
       setStatus("error");
     }

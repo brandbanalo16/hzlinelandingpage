@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { MapPin, AlertCircle, ArrowRight, CheckCircle, Shield, Clock, Star } from "lucide-react";
 import { useState, useId } from "react";
+import { useRouter } from "next/navigation";
 
 const setupOptions = ["Mainland", "Free Zone", "Offshore", "Not Sure Yet"];
 
@@ -29,6 +30,7 @@ export default function Hero() {
   const [errors, setErrors] = useState<Partial<FormData>>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const id = useId();
+  const router = useRouter();
 
   const validate = (): boolean => {
     const e: Partial<FormData> = {};
@@ -65,7 +67,14 @@ export default function Hero() {
           source: "hero-form",
         }),
       });
-      setStatus(res.ok ? "success" : "error");
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data.success) {
+        setStatus("success");
+        setForm(initialForm);
+        router.push("/thank-you");
+      } else {
+        setStatus("error");
+      }
     } catch {
       setStatus("error");
     }
@@ -92,8 +101,8 @@ export default function Hero() {
       </div>
 
       {/* ── Main Content ── */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-28 pb-10 sm:pb-16 lg:pb-20">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
 
           {/* ── LEFT: Headline ── */}
           <div className="flex-1 text-center lg:text-left animate-fadeInUp" style={{ animationDelay: "0s" }}>
@@ -114,7 +123,7 @@ export default function Hero() {
             {/* Main Headline */}
             <h1
               id="hero-heading"
-              className="font-serif text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-bold text-[#2c3650] leading-[1.04] tracking-tight mb-6"
+              className="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-[#2c3650] leading-[1.1] tracking-tight mb-4 lg:mb-6"
             >
               Your Trusted Partner
               <br />
@@ -123,13 +132,13 @@ export default function Hero() {
               </span>
             </h1>
 
-            <p className="text-base sm:text-lg text-slate-500 leading-relaxed max-w-md font-light mb-8 lg:mb-10 mx-auto lg:mx-0">
+            <p className="text-sm sm:text-base lg:text-lg text-slate-500 leading-relaxed max-w-md font-light mb-6 lg:mb-10 mx-auto lg:mx-0">
               Start and establish your business with confidence. Horizon Line provides professional,
               end-to-end company formation guidance across all&nbsp;7 Emirates.
             </p>
 
             {/* CTA row */}
-            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-12">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-8 lg:mb-12">
               <button
                 onClick={openPopup}
                 className="btn-gold inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold shadow-lg"
@@ -147,11 +156,11 @@ export default function Hero() {
             </div>
 
             {/* Trust stats row */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4 gap-3">
               {trustStats.map((stat) => (
                 <div
                   key={stat.label}
-                  className="group relative bg-white/70 backdrop-blur-md rounded-xl px-4 py-5 text-center border border-slate-200/60 shadow-sm hover:shadow-[0_8px_30px_rgb(38,100,100,0.15)] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+                  className="group relative bg-white/70 backdrop-blur-md rounded-xl px-3 py-4 sm:px-4 sm:py-5 text-center border border-slate-200/60 shadow-sm hover:shadow-[0_8px_30px_rgb(38,100,100,0.15)] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
                 >
                   {/* Hover Background Accent */}
                   <div className="absolute inset-0 bg-[#266464] transform translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-in-out z-0" />
@@ -171,7 +180,7 @@ export default function Hero() {
 
           {/* ── RIGHT: Form Card ── */}
           <div
-            className="w-full lg:w-[430px] flex-shrink-0 animate-fadeInRight"
+            className="w-full lg:w-[430px] flex-shrink-0 animate-fadeInRight hidden lg:block"
             style={{ animationDelay: "0.2s" }}
           >
             {/* Solid top accent line */}

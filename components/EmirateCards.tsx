@@ -48,19 +48,20 @@ export default function EmirateCards() {
 
   return (
     <section
-      className="py-20 lg:py-32 relative overflow-hidden"
+      id="business-setup"
+      className="py-12 sm:py-16 lg:py-28 relative overflow-hidden"
       aria-labelledby="emirates-heading"
       style={{ background: "#f4f6f9" }}
     >
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <div className="section-label justify-center mb-5">
             UAE-Wide Business Setup
           </div>
           <h2
             id="emirates-heading"
-            className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#2c3650] mb-5 tracking-tight"
+            className="font-serif text-2xl sm:text-4xl lg:text-5xl font-bold text-[#2c3650] mb-4 tracking-tight"
           >
             Business Setup Across
             <br />

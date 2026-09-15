@@ -44,7 +44,7 @@ const steps = [
 export default function ProcessTimeline() {
   return (
     <section
-      className="py-20 lg:py-32 relative overflow-hidden"
+      className="py-12 sm:py-16 lg:py-28 relative overflow-hidden"
       aria-labelledby="process-heading"
       style={{ background: "#f8f9fc" }}
     >
@@ -60,7 +60,7 @@ export default function ProcessTimeline() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <div
             className="inline-flex items-center gap-3 mb-5 text-[10px] font-bold tracking-[0.22em] uppercase"
             style={{ color: "#266464" }}
@@ -71,7 +71,7 @@ export default function ProcessTimeline() {
           </div>
           <h2
             id="process-heading"
-            className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0A1628] mb-5 tracking-tight"
+            className="font-serif text-2xl sm:text-4xl lg:text-5xl font-bold text-[#0A1628] mb-4 tracking-tight"
           >
             Set Up Your UAE Business
             <br />
@@ -79,7 +79,7 @@ export default function ProcessTimeline() {
               in 5 Simple Steps
             </span>
           </h2>
-          <p className="text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-slate-500 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto leading-relaxed">
             A clear, guided process from initial consultation through to business launch.
           </p>
         </div>
