@@ -92,20 +92,26 @@ export async function POST(req: NextRequest) {
     const visitorEmail =
       email && email !== "—" ? email : undefined;
 
-    // ── Fire email without blocking the response ──
-    // The server accepts the enquiry and returns success immediately.
-    // The email is dispatched asynchronously so the user is redirected
-    // to /thank-you in approximately 1 second regardless of SMTP latency.
-    sendEnquiryEmail({
-      subject: `New Business Setup Enquiry – ${fullName}`,
-      text: emailText,
-      replyTo: visitorEmail,
-    }).catch((err) => {
-      // Log server-side only — never expose to the browser.
-      console.error("[mailer] SMTP send error:", err?.message || "Unknown error");
-    });
+    // ── Fire email and wait for it ──
+    // In serverless environments (like Vercel), if you don't await the email send,
+    // the process might terminate before the email is actually sent.
+    try {
+      await sendEnquiryEmail({
+        subject: `New Business Setup Enquiry – ${fullName}`,
+        text: emailText,
+        replyTo: visitorEmail,
+      });
+    } catch (err) {
+      console.error("[mailer] SMTP send error:", (err as Error)?.message || "Unknown error");
+      // Even if email fails, we might still want to return success to the user,
+      // or we can return an error. Let's return an error so they know it failed.
+      return NextResponse.json(
+        { error: "Failed to send email. Please try again." },
+        { status: 500 }
+      );
+    }
 
-    // ── Return success immediately ──
+    // ── Return success ──
     return NextResponse.json(
       { success: true, message: "Enquiry received successfully." },
       { status: 200 }
