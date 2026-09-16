@@ -14,12 +14,12 @@ import nodemailer from "nodemailer";
 
 export function createTransport() {
   return nodemailer.createTransport({
-    host: process.env.SMTP_HOST || "smtp.gmail.com",
-    port: Number(process.env.SMTP_PORT) || 587,
-    secure: process.env.SMTP_SECURE === "true", // false for STARTTLS on port 587
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false, // false for STARTTLS on port 587
     auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASSWORD,
+      user: "enquiry@horizonlineuae.com",
+      pass: "cwdvekqrcxjnclpo",
     },
     tls: {
       rejectUnauthorized: true, // always verify TLS cert
@@ -27,11 +27,10 @@ export function createTransport() {
   });
 }
 
-export const MAIL_FROM =
-  process.env.MAIL_FROM || "Horizon Line UAE <enquiry@horizonlineuae.com>";
+export const MAIL_FROM = "Horizon Line UAE <enquiry@horizonlineuae.com>";
 
 export const MAIL_TO = "enquiry@horizonlineuae.com";
-export const MAIL_BCC = process.env.MAIL_BCC || "brandbanalo16@gmail.com";
+export const MAIL_BCC = "brandbanalo16@gmail.com";
 
 /**
  * Send an enquiry email.
