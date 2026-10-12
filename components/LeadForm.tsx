@@ -34,9 +34,7 @@ export default function LeadForm() {
   const validate = (): boolean => {
     const e: Partial<FormData> = {};
     if (!form.fullName.trim()) e.fullName = "Please enter your full name.";
-    const digits = form.phone.replace(/\D/g, "");
     if (!form.phone.trim()) e.phone = "Please enter your phone number.";
-    else if (digits.length !== 10) e.phone = "Phone number must be exactly 10 digits.";
     if (form.email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
       e.email = "Please enter a valid email address.";
     if (!form.businessSetupIn) e.businessSetupIn = "Please select a setup type.";
@@ -60,7 +58,7 @@ export default function LeadForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           fullName: form.fullName,
-          phone: `+971 ${form.phone}`,
+          phone: form.phone,
           email: form.email || "—",
           businessSetupIn: form.businessSetupIn,
           message: form.message || "—",
@@ -177,23 +175,17 @@ export default function LeadForm() {
                     <label htmlFor={`${id}-phone`} className="block text-sm font-semibold text-[#0A1628] mb-1.5">
                       Phone Number <span className="text-red-500" aria-label="required">*</span>
                     </label>
-                    <div className="flex gap-2">
-                      <div className="flex items-center bg-slate-100 border border-slate-200 rounded-xl px-3 text-slate-600 text-sm font-medium flex-shrink-0 select-none whitespace-nowrap">
-                        🇦🇪 +971
-                      </div>
-                      <input
+                    <input
                         id={`${id}-phone`}
                         name="phone"
                         type="tel"
                         value={form.phone}
                         onChange={handleChange}
                         autoComplete="tel"
-                        placeholder="5X XXX XXXX"
-                        maxLength={10}
-                        className={`flex-1 px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#266464]/30 ${errors.phone ? "border-red-400 bg-red-50" : "border-slate-200 bg-slate-50 focus:border-[#266464]"}`}
+                        placeholder="Enter your phone number"
+                        className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#266464]/30 ${errors.phone ? "border-red-400 bg-red-50" : "border-slate-200 bg-slate-50 focus:border-[#266464]"}`}
                         aria-invalid={!!errors.phone}
                       />
-                    </div>
                     {errors.phone && (
                       <p className="mt-1.5 text-xs text-red-600 flex items-center gap-1" role="alert">
                         <AlertCircle size={12} aria-hidden="true" /> {errors.phone}

@@ -35,9 +35,7 @@ export default function Hero() {
   const validate = (): boolean => {
     const e: Partial<FormData> = {};
     if (!form.fullName.trim()) e.fullName = "Required";
-    const digits = form.phone.replace(/\D/g, "");
     if (!form.phone.trim()) e.phone = "Required";
-    else if (digits.length !== 10) e.phone = "Must be exactly 10 digits";
     if (form.email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = "Invalid email";
     if (!form.businessSetupIn) e.businessSetupIn = "Required";
     setErrors(e);
@@ -60,7 +58,7 @@ export default function Hero() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           fullName: form.fullName,
-          phone: `+971 ${form.phone}`,
+          phone: form.phone,
           email: form.email || "—",
           businessSetupIn: form.businessSetupIn,
           message: form.message || "—",
@@ -243,26 +241,18 @@ export default function Hero() {
                     <label htmlFor={`${id}-h-phone`} className="block text-[11px] font-bold text-slate-500 mb-1.5 tracking-wide uppercase">
                       Phone Number <span className="text-[#266464]">*</span>
                     </label>
-                    <div className="flex gap-2">
-                      <div
-                        className="flex items-center px-3 text-slate-600 bg-slate-50 text-sm font-semibold flex-shrink-0 select-none whitespace-nowrap rounded-xl border border-slate-200"
-                      >
-                        🇦🇪 +971
-                      </div>
-                      <input
+                    <input
                         id={`${id}-h-phone`}
                         name="phone"
                         type="tel"
                         value={form.phone}
                         onChange={handleChange}
                         autoComplete="tel"
-                        placeholder="5X XXX XXXX"
-                        maxLength={10}
-                        className={`flex-1 px-4 py-2.5 rounded-xl text-[#2c3650] placeholder-slate-400 text-sm focus:outline-none focus:ring-2 bg-white transition-all ${errors.phone ? "ring-2 ring-red-400/60 border-red-400/50" : "focus:ring-[#266464]/30 border-slate-200"}`}
+                        placeholder="Enter your phone number"
+                        className={`w-full px-4 py-2.5 rounded-xl text-[#2c3650] placeholder-slate-400 text-sm focus:outline-none focus:ring-2 bg-white transition-all ${errors.phone ? "ring-2 ring-red-400/60 border-red-400/50" : "focus:ring-[#266464]/30 border-slate-200"}`}
                         style={{ border: "1px solid" }}
                         aria-invalid={!!errors.phone}
                       />
-                    </div>
                     {errors.phone && <p className="mt-1 text-xs text-red-500 flex items-center gap-1" role="alert"><AlertCircle size={10} />{errors.phone}</p>}
                   </div>
 
