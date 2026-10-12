@@ -148,7 +148,7 @@ export default function Hero() {
                 <ArrowRight size={15} aria-hidden="true" />
               </button>
               <a
-                href="tel:+971556278856"
+                href="tel:+971566866849"
                 className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 border border-slate-200 text-[#2c3650] font-semibold px-7 py-3.5 rounded-xl transition-all duration-300 text-sm hover:border-[#266464]/40 hover:shadow-sm"
               >
                 Call For Free Consultation

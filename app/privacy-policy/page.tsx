@@ -178,7 +178,7 @@ export default function PrivacyPolicyPage() {
             <ul className="space-y-2">
               <li><strong>Website:</strong> www.horizonlineuae.com</li>
               <li><strong>Email:</strong> enquiry@horizonlineuae.com</li>
-              <li><strong>Phone:</strong> +971541787863</li>
+              <li><strong>Phone:</strong> +971566866849</li>
               <li><strong>Office Address:</strong> Office No. 103, Juma Al Majid Building, Industrial Area 4, Sharjah, UAE</li>
             </ul>
           </div>

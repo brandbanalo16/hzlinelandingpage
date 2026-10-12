@@ -53,13 +53,13 @@ export default function HomePage() {
       <AboutUs />
       <SetupTypeCards />
       <EmirateCards />
-      <WhyHorizonLine />
+      {/* <WhyHorizonLine /> */}
       <ProcessTimeline />
       <OtherServicesCarousel />
       <LeadForm />
       <Testimonials />
       <FAQ />
-      <FinalCTA />
+      {/* <FinalCTA /> */}
     </>
   );
 }

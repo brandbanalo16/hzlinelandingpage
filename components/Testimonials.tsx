@@ -100,11 +100,11 @@ export default function Testimonials() {
         </div>
 
         {/* Bottom Row (Slides Right) */}
-        <div className="flex w-max animate-marquee-right">
+        {/* <div className="flex w-max animate-marquee-right">
           {[...bottomRowTestimonials, ...bottomRowTestimonials].map((t, i) => (
             <TestimonialCard key={`bot-${i}`} testimonial={t} />
           ))}
-        </div>
+        </div> */}
 
         {/* Right Fade Gradient */}
         <div className="absolute top-0 bottom-0 right-0 w-24 md:w-48 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none" />

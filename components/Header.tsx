@@ -33,11 +33,13 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2.5 group">
               <Image
-                src="/src/img/logo.webp"
-                alt="Horizon Line"
-                width={150}
-                height={40}
-                className="object-contain"
+                src="/logo.webp"
+                alt="Horizon Line Management Consultancy"
+                width={190}
+                height={53}
+                priority
+                unoptimized
+                className="h-10 sm:h-11 w-auto object-contain"
               />
             </Link>
 
@@ -65,11 +67,11 @@ export default function Header() {
             {/* Actions */}
             <div className="hidden md:flex items-center gap-4">
               <a
-                href="tel:+97100000000"
+                href="tel:+971566866849"
                 className="inline-flex items-center gap-2 text-sm font-bold text-slate-600 hover:text-[#0A1628] transition-colors"
               >
                 <Phone size={15} />
-                +971 50 123 4567
+                +971566866849
               </a>
               <button
                 onClick={openPopup}
@@ -117,11 +119,11 @@ export default function Header() {
 
           <div className="mt-8 flex flex-col gap-4">
             <a
-              href="tel:+97100000000"
+              href="tel:+971566866849"
               className="flex items-center justify-center gap-2 p-4 rounded-xl text-[#0A1628] bg-slate-50 border border-slate-200 font-bold"
             >
               <Phone size={18} className="text-[#266464]" />
-              Call +971 50 123 4567
+              Call +971566866849
             </a>
             <button
               onClick={() => {

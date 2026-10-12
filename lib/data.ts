@@ -222,33 +222,33 @@ export const faqs: FAQ[] = [
     question: "Can foreigners start a business in the UAE?",
     answer:
       "Yes, non-UAE nationals can establish a business in the UAE. The ownership rules, permitted business activities and applicable requirements differ depending on the setup type, Emirate and jurisdiction. Free Zones typically allow full foreign ownership for eligible business activities. Mainland ownership regulations have evolved, and many activities now permit full foreign ownership. Offshore structures also accommodate foreign shareholders for permitted purposes. The specific rules depend on your business activity and the chosen Emirate or jurisdiction.",
-  },
-  {
-    question: "Which Emirate is best for business setup?",
-    answer:
-      "The most suitable Emirate for your business setup depends on your specific business activity, target market, operational requirements, office needs, visa requirements and budget. Dubai is a major international business and trade hub. Abu Dhabi is the UAE's capital with a strong economic and regulatory environment. Sharjah, Ajman, Umm Al Quwain, Ras Al Khaimah and Fujairah each offer their own advantages for different business types. Horizon Line can help you assess which Emirate is best suited to your particular business and objectives.",
-  },
-  {
-    question: "Can I set up a business in any of the seven Emirates?",
-    answer:
-      "Yes, business setup is available across all seven Emirates of the UAE — Dubai, Abu Dhabi, Sharjah, Ajman, Umm Al Quwain, Ras Al Khaimah and Fujairah. Each Emirate has its own regulatory authorities, Free Zones and Mainland licensing frameworks. Horizon Line provides business setup guidance across all seven Emirates to help you identify the most suitable location and jurisdiction for your business.",
-  },
-  {
-    question: "What documents are required for UAE company formation?",
-    answer:
-      "The core documents typically required for UAE company formation include passport copies of all shareholders and managers, passport photographs, a proposed company name, details of your business activity, shareholder information, manager information and contact details. Additional documents may be required depending on your chosen Emirate, jurisdiction, business activity, ownership structure and individual circumstances. Horizon Line can guide you on the exact documentation required for your specific setup.",
-  },
-  {
-    question: "Should I choose Mainland, Free Zone or Offshore?",
-    answer:
-      "The right choice depends on your specific business goals. Mainland setup is typically suited to businesses that need to operate across the UAE market, work with government entities or conduct activities that require a Mainland licence. Free Zone setup can suit businesses focused on international trade, specific sectors or those seeking particular Free Zone infrastructure. Offshore structures are generally for international business or holding purposes rather than UAE-based operations. Horizon Line provides personalised guidance to help you choose the most appropriate setup based on your activity, objectives and circumstances.",
-  },
-  {
-    question:
-      "Does Horizon Line provide business setup support across all seven Emirates?",
-    answer:
-      "Yes. Horizon Line provides professional business setup and company formation guidance across all seven Emirates of the UAE — Dubai, Abu Dhabi, Sharjah, Ajman, Umm Al Quwain, Ras Al Khaimah and Fujairah. Whether you are considering a Mainland, Free Zone or Offshore setup, Horizon Line can help you understand your options, navigate the process and complete the required steps for your chosen Emirate and structure.",
-  },
+  }
+  // {
+  //   question: "Which Emirate is best for business setup?",
+  //   answer:
+  //     "The most suitable Emirate for your business setup depends on your specific business activity, target market, operational requirements, office needs, visa requirements and budget. Dubai is a major international business and trade hub. Abu Dhabi is the UAE's capital with a strong economic and regulatory environment. Sharjah, Ajman, Umm Al Quwain, Ras Al Khaimah and Fujairah each offer their own advantages for different business types. Horizon Line can help you assess which Emirate is best suited to your particular business and objectives.",
+  // },
+  // {
+  //   question: "Can I set up a business in any of the seven Emirates?",
+  //   answer:
+  //     "Yes, business setup is available across all seven Emirates of the UAE — Dubai, Abu Dhabi, Sharjah, Ajman, Umm Al Quwain, Ras Al Khaimah and Fujairah. Each Emirate has its own regulatory authorities, Free Zones and Mainland licensing frameworks. Horizon Line provides business setup guidance across all seven Emirates to help you identify the most suitable location and jurisdiction for your business.",
+  // },
+  // {
+  //   question: "What documents are required for UAE company formation?",
+  //   answer:
+  //     "The core documents typically required for UAE company formation include passport copies of all shareholders and managers, passport photographs, a proposed company name, details of your business activity, shareholder information, manager information and contact details. Additional documents may be required depending on your chosen Emirate, jurisdiction, business activity, ownership structure and individual circumstances. Horizon Line can guide you on the exact documentation required for your specific setup.",
+  // },
+  // {
+  //   question: "Should I choose Mainland, Free Zone or Offshore?",
+  //   answer:
+  //     "The right choice depends on your specific business goals. Mainland setup is typically suited to businesses that need to operate across the UAE market, work with government entities or conduct activities that require a Mainland licence. Free Zone setup can suit businesses focused on international trade, specific sectors or those seeking particular Free Zone infrastructure. Offshore structures are generally for international business or holding purposes rather than UAE-based operations. Horizon Line provides personalised guidance to help you choose the most appropriate setup based on your activity, objectives and circumstances.",
+  // },
+  // {
+  //   question:
+  //     "Does Horizon Line provide business setup support across all seven Emirates?",
+  //   answer:
+  //     "Yes. Horizon Line provides professional business setup and company formation guidance across all seven Emirates of the UAE — Dubai, Abu Dhabi, Sharjah, Ajman, Umm Al Quwain, Ras Al Khaimah and Fujairah. Whether you are considering a Mainland, Free Zone or Offshore setup, Horizon Line can help you understand your options, navigate the process and complete the required steps for your chosen Emirate and structure.",
+  // },
 ];
 
 export const comparisonRows: ComparisonRow[] = [

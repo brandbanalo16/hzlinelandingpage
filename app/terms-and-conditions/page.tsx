@@ -24,7 +24,7 @@ export default function TermsAndConditionsPage() {
             <li><strong>Company Name:</strong> Horizonline</li>
             <li><strong>Website:</strong> www.horizonlineuae.com</li>
             <li><strong>Email:</strong> enquiry@horizonlineuae.com</li>
-            <li><strong>Phone:</strong> +971541787863</li>
+            <li><strong>Phone:</strong> +971566866849</li>
             <li><strong>Office Address:</strong> Office No. 103, Juma Al Majid Building, Industrial Area 4, Sharjah, UAE</li>
           </ul>
 
@@ -116,14 +116,14 @@ export default function TermsAndConditionsPage() {
             <ul className="space-y-2">
               <li><strong>Website:</strong> www.horizonlineuae.com</li>
               <li><strong>Email:</strong> enquiry@horizonlineuae.com</li>
-              <li><strong>Phone:</strong> +971541787863 / +971-65105959</li>
+              <li><strong>Phone:</strong> +971566866849 / +971-65105959</li>
               <li><strong>Office Address:</strong> Office No. 103, Juma Al Majid Building, Industrial Area 4, Sharjah, UAE</li>
             </ul>
           </div>
 
           <h2 className="text-2xl font-bold text-[#2c3650] mt-10 mb-4">30. ACKNOWLEDGEMENT</h2>
           <p>By accessing our website or engaging Horizonline, you acknowledge that you have read and understood these Terms and Conditions, agree to comply with them, confirm that information and documents supplied by you are accurate and genuine, will comply with applicable UAE laws and regulations, and understand that government authorities, banks and other third parties may make independent decisions affecting your application or Service.</p>
-          
+
           <p className="text-sm text-slate-400 mt-12">© Horizonline. All Rights Reserved.</p>
         </div>
       </div>

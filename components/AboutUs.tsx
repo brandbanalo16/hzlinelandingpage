@@ -28,7 +28,7 @@ export default function AboutUs() {
 
             <div className="flex flex-wrap items-center gap-4">
               <a
-                href="tel:+971541787863"
+                href="tel:+971566866849"
                 className="inline-flex items-center justify-center bg-[#1B365D] hover:bg-[#11233e] text-white font-medium px-6 py-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md text-sm gap-2"
               >
                 <Phone size={16} />
