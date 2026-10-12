@@ -22,7 +22,7 @@ export default function AboutUs() {
                 From company registration and business licensing to visa assistance, PRO services, office solutions, and ongoing corporate support, our team manages the essential steps of your business setup journey under one roof. We simplify complex procedures, explain your options clearly, and ensure every stage is handled efficiently and professionally.
               </p>
               <p>
-                Whether you are launching a new venture in Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, or Umm Al Quwain, Horizon Line is committed to making your UAE business setup experience simple, transparent, and hassle-free—so you can focus on building and growing your business.
+                Whether you are launching a new venture in Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain, Horizon Line is committed to making your UAE business setup experience simple, transparent, and hassle-free—so you can focus on building and growing your business.
               </p>
             </div>
 
@@ -49,8 +49,8 @@ export default function AboutUs() {
           </div>
 
           {/* Right Image - hidden on mobile */}
-          <div 
-            className="relative rounded-2xl overflow-hidden shadow-xl w-full bg-slate-100 cursor-pointer group hidden lg:block" 
+          <div
+            className="relative rounded-2xl overflow-hidden shadow-xl w-full bg-slate-100 cursor-pointer group hidden lg:block"
             style={{ aspectRatio: "1" }}
             onClick={() => window.dispatchEvent(new Event("open-popup-form"))}
           >
