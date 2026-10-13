@@ -76,7 +76,7 @@ export async function POST(req: NextRequest) {
       : "Source: horizonlineuae.com";
 
     const emailText = [
-      "New Enquiry Received - Horizon Line UAE",
+      "New Enquiry Received - Horizon Line UAE (Landing Page)",
       "",
       `Name:             ${fullName}`,
       `Phone:            ${phone}`,
