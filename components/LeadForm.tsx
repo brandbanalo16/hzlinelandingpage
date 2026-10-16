@@ -70,6 +70,7 @@ export default function LeadForm() {
       if (res.ok && data.success) {
         setStatus("success");
         setForm(initialForm);
+        pushEvent("lead_form_success", { form_name: "middle", setup_type: form.businessSetupIn });
         router.push("/thank-you");
       } else {
         setStatus("error");
