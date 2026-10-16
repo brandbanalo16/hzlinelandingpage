@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PopupForm from "@/components/PopupForm";
+import StickyWhatsApp from "@/components/StickyWhatsApp";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -132,6 +133,7 @@ export default function RootLayout({
         <main id="main-content">{children}</main>
         <Footer />
         <PopupForm />
+        <StickyWhatsApp />
       </body>
     </html>
   );
