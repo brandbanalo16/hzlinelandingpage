@@ -4,6 +4,7 @@ import Image from "next/image";
 import { MapPin, AlertCircle, ArrowRight, CheckCircle, Shield, Clock, Star } from "lucide-react";
 import { useState, useId } from "react";
 import { useRouter } from "next/navigation";
+import { pushEvent } from "@/lib/gtm";
 
 const setupOptions = ["Mainland", "Free Zone", "Offshore", "Not Sure Yet"];
 
