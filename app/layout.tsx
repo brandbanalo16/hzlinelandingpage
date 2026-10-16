@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PopupForm from "@/components/PopupForm";
 import StickyWhatsApp from "@/components/StickyWhatsApp";
+import GTMEvents from "@/components/GTMEvents";
+
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -107,34 +111,4 @@ const websiteSchema = {
       "@type": "EntryPoint",
       urlTemplate: "https://www.horizonlineuae.com/?s={search_term_string}",
     },
-    "query-input": "required name=search_term_string",
-  },
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en" className={`${poppins.variable}`}>
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-        />
-      </head>
-      <body className="font-sans antialiased bg-white text-[#0A1628]">
-        <Header />
-        <main id="main-content">{children}</main>
-        <Footer />
-        <PopupForm />
-        <StickyWhatsApp />
-      </body>
-    </html>
-  );
-}
+    "query-input": "required
