@@ -4,6 +4,7 @@ import { useState, useEffect, useId, useCallback } from "react";
 import Image from "next/image";
 import { X, CheckCircle, AlertCircle, ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { pushEvent } from "@/lib/gtm";
 
 type FormData = {
   fullName: string;
