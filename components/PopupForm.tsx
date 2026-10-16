@@ -96,6 +96,7 @@ export default function PopupForm() {
       if (res.ok && data.success) {
         setStatus("success");
         setForm(initialForm);
+        pushEvent("lead_form_success", { form_name: "popup", setup_type: form.businessSetupIn });
         router.push("/thank-you");
       } else {
         setStatus("error");
