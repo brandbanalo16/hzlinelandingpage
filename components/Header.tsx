@@ -77,6 +77,7 @@ export default function Header() {
             {/* Actions */}
             <div className="hidden md:flex items-center gap-4">
               <a
+                id="wa-header"
                 href={WA_URL}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -131,6 +132,7 @@ export default function Header() {
 
           <div className="mt-8 flex flex-col gap-4">
             <a
+              id="wa-header-mobile"
               href={WA_URL}
               target="_blank"
               rel="noopener noreferrer"
