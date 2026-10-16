@@ -3,6 +3,7 @@
 import { useState, useId } from "react";
 import { Send, MessageCircle, AlertCircle, CheckCircle, ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { pushEvent } from "@/lib/gtm";
 
 type FormData = {
   fullName: string;
