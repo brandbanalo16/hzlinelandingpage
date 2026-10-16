@@ -61,6 +61,7 @@ export default function Footer() {
       if (res.ok && data.success) { 
         setStatus("success"); 
         setForm(initialForm); 
+        pushEvent("lead_form_success", { form_name: "footer", setup_type: form.service });
         router.push("/thank-you");
       }
       else setStatus("error");
