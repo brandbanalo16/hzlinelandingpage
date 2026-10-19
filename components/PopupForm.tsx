@@ -125,8 +125,8 @@ export default function PopupForm() {
           <X size={16} />
         </button>
 
-        {/* ── Left Panel ── */}
-        <div className="relative md:w-[42%] flex-shrink-0 min-h-[260px] md:min-h-0 overflow-hidden">
+        {/* ── Left Panel (hidden on mobile/small screens) ── */}
+        <div className="hidden md:flex relative md:w-[42%] flex-shrink-0 min-h-0 overflow-hidden">
           <Image
             src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop"
             alt="Business consultant"
