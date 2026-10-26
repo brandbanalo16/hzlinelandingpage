@@ -84,7 +84,9 @@ export default function Footer() {
           <div>
             <img src="/src/img/logo-black.webp" alt="Horizon Line" className="w-60 h-auto mb-4" style={{ filter: "brightness(0) invert(1)" }} />
             <p className="text-slate-400 text-sm leading-relaxed mb-6">
-              Professional business setup and company formation guidance across all 7 Emirates — Mainland, Free Zone and Offshore.
+              Horizon Line is a brand of *AKARSIA, a proprietorship owned by **Aditya Kumar Singh. GSTIN: **07BQVPS4257F1Z7. Registered business address: **Unit No. 739, Seventh Floor, District Centre Tower Plot, Westend Mall, Janakpuri, New Delhi, Delhi – 110058*.
+
+Horizon Line is a private business setup consultancy and is not affiliated with, endorsed by, or associated with any government authority..
             </p>
 
             {/* Social Icons */}
