@@ -160,9 +160,8 @@ export default function OtherServicesCarousel() {
             <button
               key={idx}
               onClick={() => setCurrentIndex(idx)}
-              className={`h-1.5 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#266464]/40 ${
-                idx === currentIndex ? "w-6 bg-[#266464]" : "w-1.5 bg-slate-300 hover:bg-slate-400"
-              }`}
+              className={`h-1.5 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#266464]/40 ${idx === currentIndex ? "w-6 bg-[#266464]" : "w-1.5 bg-slate-300 hover:bg-slate-400"
+                }`}
               role="tab"
               aria-selected={idx === currentIndex}
               aria-label={`Go to position ${idx + 1}`}

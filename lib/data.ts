@@ -126,22 +126,6 @@ export const emirates: Emirate[] = [
 
 export const otherServices: OtherService[] = [
   {
-    id: "business-visa",
-    title: "Business Visa Services",
-    description:
-      "Professional assistance with eligible UAE business and residency visa requirements.",
-    href: "/business-visa-uae/",
-    icon: "FileCheck",
-  },
-  {
-    id: "golden-visa",
-    title: "Golden Visa",
-    description:
-      "Explore eligibility and application support for qualifying investors, entrepreneurs and professionals.",
-    href: "/golden-visa-uae/",
-    icon: "Award",
-  },
-  {
     id: "trademark",
     title: "Trademark Registration",
     description:

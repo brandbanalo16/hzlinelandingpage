@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
+import DisclaimerBanner from "@/components/DisclaimerBanner";
 import SetupTypeCards from "@/components/SetupTypeCards";
 import EmirateCards from "@/components/EmirateCards";
 import AboutUs from "@/components/AboutUs";
@@ -49,6 +50,7 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <Hero />
+      <DisclaimerBanner />
       <TrustBar />
       <AboutUs />
       <SetupTypeCards />
