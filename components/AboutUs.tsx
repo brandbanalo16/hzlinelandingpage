@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Play, MessageSquare } from "lucide-react";
+import { MessageSquare } from "lucide-react";
 
 export default function AboutUs() {
   return (
@@ -50,20 +50,22 @@ export default function AboutUs() {
             </div>
           </div>
 
-          {/* Right Image - hidden on mobile */}
+          {/* Right Image - visible on all screens with portrait aspect ratio */}
           <div
-            className="relative rounded-2xl overflow-hidden shadow-xl w-full bg-slate-100 cursor-pointer group hidden lg:block"
-            style={{ aspectRatio: "1" }}
+            className="relative rounded-2xl overflow-hidden shadow-xl w-full bg-slate-100 cursor-pointer group aspect-[4/3] sm:aspect-[4/5] max-h-[540px] mx-auto"
             onClick={() => window.dispatchEvent(new Event("open-popup-form"))}
           >
             <Image
-              src="/src/img/about-us.webp"
+              src="/src/img/about-us.webp?v=2"
               alt="About Horizon Line"
               fill
+              unoptimized
+              priority
               className="object-cover transition-transform duration-500 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
+          
         </div>
       </div>
     </section>
