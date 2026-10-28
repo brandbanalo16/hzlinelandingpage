@@ -113,7 +113,7 @@ export default function LeadForm() {
               ))}
             </div>
 
-            {whatsappNumber && (
+            {/* {whatsappNumber && (
               <a
                 href={`https://wa.me/${whatsappNumber.replace(/\D/g, "")}`}
                 target="_blank"
@@ -123,7 +123,7 @@ export default function LeadForm() {
                 <MessageCircle size={24} aria-hidden="true" />
                 Chat on WhatsApp
               </a>
-            )}
+            )} */}
           </div>
 
           {/* Right — form */}

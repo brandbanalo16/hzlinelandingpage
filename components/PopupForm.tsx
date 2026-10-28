@@ -141,7 +141,7 @@ export default function PopupForm() {
                 Calculate Business<br />Setup Cost
               </h2>
               <ul className="space-y-3 mb-8">
-                {["Free Consultation", "Lowest price guaranteed", "Visa processing assistance"].map((item) => (
+                {["Free Consultation", "Lowest price guaranteed", "End-to-end setup assistance"].map((item) => (
                   <li key={item} className="flex items-center gap-2.5 text-white/90 text-sm font-medium">
                     <span className="w-5 h-5 rounded-full bg-[#266464] flex items-center justify-center flex-shrink-0">
                       <svg width="10" height="8" viewBox="0 0 10 8" fill="none" aria-hidden="true">
@@ -154,7 +154,7 @@ export default function PopupForm() {
               </ul>
             </div>
 
-            <div>
+            {/* <div>
               <p className="text-white/50 text-xs mb-3 uppercase tracking-widest font-semibold">Contact us on</p>
               <a href="https://wa.me/971566866849?text=Hello%21%20I%27m%20interested%20in%20business%20setup%20services%20in%20the%20UAE.%20Can%20you%20help%20me%3F" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 bg-[#25D366]/15 hover:bg-[#25D366]/25 border border-[#25D366]/30 rounded-xl px-4 py-2.5 text-white text-sm font-semibold transition-all">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true">
@@ -162,7 +162,7 @@ export default function PopupForm() {
                 </svg>
                 WhatsApp +971566866849
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
 

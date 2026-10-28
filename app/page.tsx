@@ -56,11 +56,11 @@ export default function HomePage() {
       <SetupTypeCards />
       <EmirateCards />
       {/* <WhyHorizonLine /> */}
-      <ProcessTimeline />
       <OtherServicesCarousel />
       <LeadForm />
-      <Testimonials />
-      <FAQ />
+      <ProcessTimeline />
+      {/* <Testimonials /> */}
+      {/* <FAQ /> */}
       {/* <FinalCTA /> */}
     </>
   );

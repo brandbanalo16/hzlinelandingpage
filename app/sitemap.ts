@@ -20,8 +20,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "/business-setup-ras-al-khaimah/", priority: 0.85, changeFrequency: "monthly" as const },
     { url: "/business-setup-fujairah/", priority: 0.8, changeFrequency: "monthly" as const },
     // Service pages
-    { url: "/business-visa-uae/", priority: 0.75, changeFrequency: "monthly" as const },
-    { url: "/golden-visa-uae/", priority: 0.75, changeFrequency: "monthly" as const },
     { url: "/trademark-registration-uae/", priority: 0.75, changeFrequency: "monthly" as const },
     { url: "/corporate-bank-account-uae/", priority: 0.75, changeFrequency: "monthly" as const },
     { url: "/accounting-bookkeeping-uae/", priority: 0.75, changeFrequency: "monthly" as const },

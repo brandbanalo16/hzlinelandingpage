@@ -190,12 +190,12 @@ export const faqs: FAQ[] = [
   {
     question: "What is an Offshore company in the UAE?",
     answer:
-      "An Offshore company in the UAE is a legal entity registered in a specific UAE jurisdiction that is generally intended for international business, holding assets or other permitted purposes rather than conducting day-to-day business operations within the UAE. Offshore companies typically cannot obtain a UAE operating licence or sponsor UAE residence visas under standard rules. Eligibility and permitted activities vary by jurisdiction. Professional guidance should be obtained to determine whether an offshore structure is appropriate for your specific requirements.",
+      "An Offshore company in the UAE is a legal entity registered in a specific UAE jurisdiction that is generally intended for international business, holding assets or other permitted purposes rather than conducting day-to-day business operations within the UAE. Offshore companies typically cannot obtain a UAE operating licence or provide local establishment under standard rules. Eligibility and permitted activities vary by jurisdiction. Professional guidance should be obtained to determine whether an offshore structure is appropriate for your specific requirements.",
   },
   {
     question: "How much does it cost to set up a business in the UAE?",
     answer:
-      "The cost of business setup in the UAE depends on several factors including the Emirate you choose, whether you opt for a Mainland, Free Zone or Offshore structure, your chosen business activity, the type of trade licence required, office requirements, visa requirements and applicable government fees. Costs can vary significantly across different Emirates and jurisdictions. Horizon Line helps you understand the expected cost components before you proceed, so you can plan your budget appropriately.",
+      "The cost of business setup in the UAE depends on several factors including the Emirate you choose, whether you opt for a Mainland, Free Zone or Offshore structure, your chosen business activity, the type of trade licence required, office requirements and applicable government fees. Costs can vary significantly across different Emirates and jurisdictions. Horizon Line helps you understand the expected cost components before you proceed, so you can plan your budget appropriately.",
   },
   {
     question: "How long does company formation take in the UAE?",
@@ -210,7 +210,7 @@ export const faqs: FAQ[] = [
   // {
   //   question: "Which Emirate is best for business setup?",
   //   answer:
-  //     "The most suitable Emirate for your business setup depends on your specific business activity, target market, operational requirements, office needs, visa requirements and budget. Dubai is a major international business and trade hub. Abu Dhabi is the UAE's capital with a strong economic and regulatory environment. Sharjah, Ajman, Umm Al Quwain, Ras Al Khaimah and Fujairah each offer their own advantages for different business types. Horizon Line can help you assess which Emirate is best suited to your particular business and objectives.",
+  //     "The most suitable Emirate for your business setup depends on your specific business activity, target market, operational requirements, office needs, operational requirements and budget. Dubai is a major international business and trade hub. Abu Dhabi is the UAE's capital with a strong economic and regulatory environment. Sharjah, Ajman, Umm Al Quwain, Ras Al Khaimah and Fujairah each offer their own advantages for different business types. Horizon Line can help you assess which Emirate is best suited to your particular business and objectives.",
   // },
   // {
   //   question: "Can I set up a business in any of the seven Emirates?",
@@ -256,8 +256,8 @@ export const comparisonRows: ComparisonRow[] = [
   },
   {
     feature: "UAE Residency",
-    mainland: "Visa sponsorship available",
-    freeZone: "Visa sponsorship available",
+    mainland: "Residency eligibility available",
+    freeZone: "Residency eligibility available",
     offshore: "Generally not available under standard rules",
   },
   {
@@ -322,8 +322,6 @@ export const navigation: NavItem[] = [
   {
     label: "Other Services",
     children: [
-      { label: "Business Visa", href: "/business-visa-uae/" },
-      { label: "Golden Visa", href: "/golden-visa-uae/" },
       { label: "Trademark Registration", href: "/trademark-registration-uae/" },
       { label: "Corporate Bank Account", href: "/corporate-bank-account-uae/" },
       { label: "Accounting & Bookkeeping", href: "/accounting-bookkeeping-uae/" },

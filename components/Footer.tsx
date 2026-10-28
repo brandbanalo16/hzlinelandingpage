@@ -49,18 +49,18 @@ export default function Footer() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ 
+        body: JSON.stringify({
           fullName: form.name,
           phone: form.phone,
           email: form.email,
           businessSetupIn: form.service,
-          source: "footer" 
+          source: "footer"
         }),
       });
       const data = await res.json().catch(() => ({}));
-      if (res.ok && data.success) { 
-        setStatus("success"); 
-        setForm(initialForm); 
+      if (res.ok && data.success) {
+        setStatus("success");
+        setForm(initialForm);
         pushEvent("lead_form_success", { form_name: "footer", setup_type: form.service });
         router.push("/thank-you");
       }
@@ -84,9 +84,7 @@ export default function Footer() {
           <div>
             <img src="/src/img/logo-black.webp" alt="Horizon Line" className="w-60 h-auto mb-4" style={{ filter: "brightness(0) invert(1)" }} />
             <p className="text-slate-400 text-sm leading-relaxed mb-6">
-              Horizon Line is a brand of *AKARSIA, a proprietorship owned by **Aditya Kumar Singh. GSTIN: **07BQVPS4257F1Z7. Registered business address: **Unit No. 739, Seventh Floor, District Centre Tower Plot, Westend Mall, Janakpuri, New Delhi, Delhi – 110058*.
-
-Horizon Line is a private business setup consultancy and is not affiliated with, endorsed by, or associated with any government authority..
+              Horizon Line is a brand of Horizon Line Management Consultancy L.L.C (Trade License No. 940718), Sharjah, UAE. This website is operated by AKARSIA (Proprietorship of Aditya Kumar Singh, GSTIN 07BQVPS4257F1Z7), Unit No. 739, Seventh Floor, District Centre Tower Plot, Westend Mall, Janakpuri, New Delhi, Delhi 110058, India, the India representative of Horizon Line. Horizon Line is a private business setup consultancy and is not affiliated with, endorsed by, or associated with any government authority.
             </p>
 
             {/* Social Icons */}
@@ -196,7 +194,6 @@ Horizon Line is a private business setup consultancy and is not affiliated with,
                       <option value="mainland" className="bg-[#0A1628]">Mainland Setup</option>
                       <option value="freezone" className="bg-[#0A1628]">Free Zone Setup</option>
                       <option value="offshore" className="bg-[#0A1628]">Offshore Setup</option>
-                      <option value="visa" className="bg-[#0A1628]">Visa Services</option>
                       <option value="other" className="bg-[#0A1628]">Other</option>
                     </select>
                   </div>
@@ -224,7 +221,7 @@ Horizon Line is a private business setup consultancy and is not affiliated with,
       {/* Bottom bar */}
       <div className="border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-slate-500 text-sm">
-          <p>Copyright © {new Date().getFullYear()} Horizon Line. All rights reserved. Managed by <Link href="https://brandbanlo.com/" className="hover:text-slate-300 transition-colors">Brandbanlo</Link></p>
+          <p>Copyright © {new Date().getFullYear()} Horizon Line. All rights reserved. Managed by <Link href="https://brandbanlo.com/" className="hover:text-slate-300 transition-colors">Brandbanalo</Link></p>
           <div className="flex items-center gap-5">
             <Link href="/privacy-policy/" className="hover:text-slate-300 transition-colors">Privacy Policy</Link>
             <Link href="/terms-and-conditions/" className="hover:text-slate-300 transition-colors">Terms & Conditions</Link>

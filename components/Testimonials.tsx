@@ -7,13 +7,13 @@ const topRowTestimonials = [
   { name: "James Carter", initials: "JC", text: "Horizon Line made our Dubai Mainland LLC setup completely stress-free. Their team is incredibly knowledgeable about the latest UAE compliance laws.", color: "bg-blue-100 text-blue-700" },
   { name: "Fatima Al-Sayed", initials: "FA", text: "Outstanding advisory services! They helped us choose the perfect Free Zone for our trading company. Truly the best business setup firm in the UAE.", color: "bg-green-100 text-green-700" },
   { name: "Michael Chang", initials: "MC", text: "Super fast and reliable DMCC registration process. They handled all the paperwork and secured our trade license without any delays.", color: "bg-orange-100 text-orange-700" },
-  { name: "Sarah Jenkins", initials: "SJ", text: "My dedicated expert was patient and explained the entire Golden Visa process clearly. Highly recommend their services for expat investors.", color: "bg-purple-100 text-purple-700" },
+  { name: "Sarah Jenkins", initials: "SJ", text: "My dedicated expert was patient and explained the entire business setup process clearly. Highly recommend their services for expat investors.", color: "bg-purple-100 text-purple-700" },
   { name: "Ahmed Mansour", initials: "AM", text: "A highly professional team. They managed our corporate bank account opening and PRO services seamlessly. A huge burden off my shoulders.", color: "bg-teal-100 text-teal-700" },
   { name: "Elena Rostova", initials: "ER", text: "I was struggling to understand Offshore jurisdictions, but Horizon Line guided me perfectly. Their experts know exactly how to structure holding companies.", color: "bg-rose-100 text-rose-700" },
   { name: "Rajat Malhotra", initials: "RM", text: "Exceptional service for Abu Dhabi company registration! I had my business incorporated in record time with absolute zero hassle.", color: "bg-indigo-100 text-indigo-700" },
   { name: "David O'Connor", initials: "DO", text: "Very smooth experience setting up our tech startup in Dubai Internet City. The team calculated all costs perfectly with no hidden fees.", color: "bg-cyan-100 text-cyan-700" },
   { name: "Kunal Jain", initials: "KJ", text: "Horizon Line is our trusted partner for annual license renewals and VAT registration. We never have to worry about missing deadlines.", color: "bg-yellow-100 text-yellow-700" },
-  { name: "Sophie Laurent", initials: "SL", text: "From initial consultation to final visa stamping, their advisory has been crucial for our agency's expansion into the Middle East.", color: "bg-pink-100 text-pink-700" },
+  { name: "Sophie Laurent", initials: "SL", text: "From initial consultation to final company registration, their advisory has been crucial for our agency's expansion into the Middle East.", color: "bg-pink-100 text-pink-700" },
 ];
 
 const bottomRowTestimonials = [
@@ -22,9 +22,9 @@ const bottomRowTestimonials = [
   { name: "Thomas Wright", initials: "TW", text: "Great service and even better human support. They ensured thorough checks before finalizing our commercial office lease agreements.", color: "bg-fuchsia-100 text-fuchsia-700" },
   { name: "Hassan Tariq", initials: "HT", text: "I've been using them for years and it just keeps getting better. Their proactive business advisory is an absolute game-changer for my company.", color: "bg-sky-100 text-sky-700" },
   { name: "Maria Garcia", initials: "MG", text: "Our consultant demonstrated exceptional professionalism. He patiently clarified every query regarding our e-commerce setup in Sharjah (Shams).", color: "bg-lime-100 text-lime-700" },
-  { name: "Liam Smith", initials: "LS", text: "Such a relief that they handled the entire family visa sponsorship process for me. 10/10 for doing things on time and doing them right.", color: "bg-violet-100 text-violet-700" },
+  { name: "Liam Smith", initials: "LS", text: "Such a relief that they handled the entire company formation process for me. 10/10 for doing things on time and doing them right.", color: "bg-violet-100 text-violet-700" },
   { name: "Nidhi Sharma", initials: "NS", text: "They walked me through the entire RAKEZ manufacturing setup process, verified every document, and handled government portal issues without stress.", color: "bg-rose-100 text-rose-700" },
-  { name: "Omar Farooq", initials: "OF", text: "We outsourced our entire PRO department to them. The accuracy and speed of their visa and immigration services is simply outstanding.", color: "bg-blue-100 text-blue-700" },
+  { name: "Omar Farooq", initials: "OF", text: "We outsourced our entire PRO department to them. The accuracy and speed of their documentation and corporate services is simply outstanding.", color: "bg-blue-100 text-blue-700" },
   { name: "Jessica Wong", initials: "JW", text: "Highly transparent pricing with no hidden fees. The consultation call cleared all my doubts about 100% foreign ownership laws in the UAE.", color: "bg-orange-100 text-orange-700" },
   { name: "Sanjay Nanda", initials: "SN", text: "Best business setup firm in Dubai. Their strategic insights have helped us optimize our corporate structure significantly.", color: "bg-teal-100 text-teal-700" },
 ];

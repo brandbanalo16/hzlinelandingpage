@@ -20,10 +20,10 @@ type FormData = {
 const initialForm: FormData = { fullName: "", phone: "", email: "", businessSetupIn: "", message: "", honeypot: "" };
 
 const trustStats = [
-  { value: "500+", label: "Businesses Launched" },
   { value: "7", label: "Emirates Covered" },
-  { value: "10+", label: "Years of Expertise" },
-  { value: "100%", label: "Client Focused" },
+  { value: "100%", label: "Free Consultation" },
+  { value: "10+", label: "Years of Experience" },
+  { value: "24Hr", label: "Response within 24hr" },
 ];
 
 export default function Hero() {
@@ -110,7 +110,7 @@ export default function Hero() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2.5 bg-white/80 border border-slate-200 text-[#266464] text-[10px] font-bold tracking-[0.22em] uppercase rounded-full px-5 py-2.5 backdrop-blur-sm mb-6 shadow-sm section-label">
               <MapPin size={11} aria-hidden="true" />
-              UAE Business Setup &amp; Company Formation
+              UAE Business Setup &amp; Advisory
             </div>
 
             {/* Decorative rule */}
@@ -125,7 +125,7 @@ export default function Hero() {
               id="hero-heading"
               className="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-[#2c3650] leading-[1.1] tracking-tight mb-4 lg:mb-6"
             >
-              Your Trusted Partner
+              Your Trusted Advisory
               <br />
               <span className="text-[#266464]">
                 for Business Setup in the UAE
@@ -133,8 +133,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-sm sm:text-base lg:text-lg text-slate-500 leading-relaxed max-w-md font-light mb-6 lg:mb-10 mx-auto lg:mx-0">
-              Start and establish your business with confidence. Horizon Line provides professional,
-              end-to-end company formation guidance across all&nbsp;7 Emirates.
+              Horizon Line is a private consultancy that guides entrepreneurs and companies in understanding their options for Mainland, Free Zone and Offshore setup across the 7 Emirates.
             </p>
 
             {/* CTA row */}
@@ -144,10 +143,10 @@ export default function Hero() {
                 className="btn-gold inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold shadow-lg"
                 aria-label="Calculate your business setup cost"
               >
-                Cost Calculate
+                Free Consultation
                 <ArrowRight size={15} aria-hidden="true" />
               </button>
-              <a
+              {/* <a
                 href={`https://wa.me/971566866849?text=${encodeURIComponent("Hello! I'm interested in business setup services in the UAE. Can you help me?")}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -155,7 +154,7 @@ export default function Hero() {
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>
                 WhatsApp Free Consultation
-              </a>
+              </a> */}
             </div>
 
             {/* Trust stats row */}
@@ -247,17 +246,17 @@ export default function Hero() {
                       Phone Number <span className="text-[#266464]">*</span>
                     </label>
                     <input
-                        id={`${id}-h-phone`}
-                        name="phone"
-                        type="tel"
-                        value={form.phone}
-                        onChange={handleChange}
-                        autoComplete="tel"
-                        placeholder="Enter your phone number"
-                        className={`w-full px-4 py-2.5 rounded-xl text-[#2c3650] placeholder-slate-400 text-sm focus:outline-none focus:ring-2 bg-white transition-all ${errors.phone ? "ring-2 ring-red-400/60 border-red-400/50" : "focus:ring-[#266464]/30 border-slate-200"}`}
-                        style={{ border: "1px solid" }}
-                        aria-invalid={!!errors.phone}
-                      />
+                      id={`${id}-h-phone`}
+                      name="phone"
+                      type="tel"
+                      value={form.phone}
+                      onChange={handleChange}
+                      autoComplete="tel"
+                      placeholder="Enter your phone number"
+                      className={`w-full px-4 py-2.5 rounded-xl text-[#2c3650] placeholder-slate-400 text-sm focus:outline-none focus:ring-2 bg-white transition-all ${errors.phone ? "ring-2 ring-red-400/60 border-red-400/50" : "focus:ring-[#266464]/30 border-slate-200"}`}
+                      style={{ border: "1px solid" }}
+                      aria-invalid={!!errors.phone}
+                    />
                     {errors.phone && <p className="mt-1 text-xs text-red-500 flex items-center gap-1" role="alert"><AlertCircle size={10} />{errors.phone}</p>}
                   </div>
 

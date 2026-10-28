@@ -157,7 +157,7 @@ export default function RootLayout({
         <main id="main-content">{children}</main>
         <Footer />
         <PopupForm />
-        <StickyWhatsApp />
+        {/* <StickyWhatsApp /> */}
       </body>
     </html>
   );

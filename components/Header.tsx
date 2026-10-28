@@ -76,7 +76,7 @@ export default function Header() {
 
             {/* Actions */}
             <div className="hidden md:flex items-center gap-4">
-              <a
+              {/* <a
                 id="wa-header"
                 href={WA_URL}
                 target="_blank"
@@ -85,7 +85,7 @@ export default function Header() {
               >
                 <WhatsAppIcon size={16} />
                 WhatsApp Us
-              </a>
+              </a> */}
               <button
                 onClick={openPopup}
                 className="btn-gold px-6 py-2.5 rounded-xl text-sm shadow-sm"
@@ -131,7 +131,7 @@ export default function Header() {
           </nav>
 
           <div className="mt-8 flex flex-col gap-4">
-            <a
+            {/* <a
               id="wa-header-mobile"
               href={WA_URL}
               target="_blank"
@@ -140,7 +140,7 @@ export default function Header() {
             >
               <WhatsAppIcon size={20} />
               WhatsApp +971566866849
-            </a>
+            </a> */}
             <button
               onClick={() => {
                 setIsMobileMenuOpen(false);
